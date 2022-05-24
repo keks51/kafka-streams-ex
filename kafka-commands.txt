@@ -1,0 +1,17 @@
+#Start producer
+kafka-console-producer \
+--topic test1-orders \
+--broker-list localhost:9092 \
+--property parse.key=true \
+--property key.separator=,
+
+
+#Read offsets from __consumer_offsets topic
+echo "exclude.internal.topics=false" > /tmp/consumer.config
+
+kafka-console-consumer \
+--consumer.config /tmp/consumer.config \
+--formatter "kafka.coordinator.group.GroupMetadataManager\$OffsetsMessageFormatter" \
+--bootstrap-server localhost:9092 \
+--topic __consumer_offsets \
+--from-beginning
