@@ -7,7 +7,7 @@ import utils.TestBase.{createTempDir, deleteRecursively}
 
 import java.io.{File, IOException}
 
-class TestBase extends AnyFlatSpec with GivenWhenThen with Matchers {
+class TestBase extends AnyFlatSpec with GivenWhenThen with Matchers with KafkaUtils {
   def withTempDir(f: File => Unit): Unit = {
     val dir: File = createTempDir
     dir.mkdir()

@@ -8,7 +8,7 @@ import utils.{KafkaUtils, TestBase}
 import java.util.Properties;
 
 
-class JoinStreamsExTest extends TestBase with KafkaUtils {
+class JoinStreamsExTest extends TestBase {
 
   "fdfd" should "fdf" in withTempDir { dir =>
     val streamsConfiguration: Properties = {
