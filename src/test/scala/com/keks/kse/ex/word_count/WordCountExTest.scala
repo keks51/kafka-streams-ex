@@ -1,12 +1,10 @@
 package com.keks.kse.ex.word_count
 
 import org.apache.kafka.common.utils.Bytes
-import org.apache.kafka.streams.processor.StateStore
 import org.apache.kafka.streams.state.{KeyValueIterator, KeyValueStore, ValueAndTimestamp}
-import org.apache.kafka.streams.{KeyValue, StreamsConfig, TestInputTopic, TopologyTestDriver}
+import org.apache.kafka.streams.{StreamsConfig, TestInputTopic, TopologyTestDriver}
 import utils.TestBase
 
-import java.util
 import java.util.Properties
 
 class WordCountExTest extends TestBase {
